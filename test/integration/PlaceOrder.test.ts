@@ -17,7 +17,7 @@ test("Deve fazer um pedido", async function() {
             idItem: 3,
             quantity: 3,
         },
-    ]);
+    ], new Date("2021-03-01"));
     // const placeOrder = new PlaceOrder(new ItemRepositoryDatabase(new DatabaseConnectionAdapter()), new OrderRepositoryMemory());
     const placeOrder = new PlaceOrder(new ItemRepositoryMemory(), new OrderRepositoryMemory());
     const output = await placeOrder.execute(input);

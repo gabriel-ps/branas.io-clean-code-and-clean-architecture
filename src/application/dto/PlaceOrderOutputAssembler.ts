@@ -4,6 +4,6 @@ import PlaceOrderOutput from "./PlaceOrderOutput";
 export default class PlaceOrderOutputAssembler {
 
     static assemble (order: Order): PlaceOrderOutput {
-        return new PlaceOrderOutput(order.getTotal());
+        return new PlaceOrderOutput(order.code.value, order.getTotal());
     }
 }
